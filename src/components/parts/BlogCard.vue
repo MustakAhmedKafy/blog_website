@@ -1,8 +1,24 @@
 <script setup>
-import { defineProps } from "vue";
+import { defineProps, computed } from "vue";
 
 const props = defineProps({
   post: Object,
+});
+
+
+
+// dynamic img
+
+const randomImageUrl = computed(() => {
+  try {
+    // Generate a random image URL
+    const randomId = Math.floor(Math.random() * 1000); // Adjust as needed
+    return `https://picsum.photos/id/${randomId}/200/300`; // Adjust width and height as needed
+  } catch (error) {
+    console.error('Error generating random image URL:', error);
+    // Return a fallback image URL or handle the error in another way
+    return 'fallback-image-url.jpg';
+  }
 });
 </script>
 
@@ -12,7 +28,7 @@ const props = defineProps({
     <router-link class="text-decoration-none" :to="`/blog/${post.id}`">
       <div class="card bg-white">
         <img
-          src="https://v1.tailwindcss.com/img/card-top.jpg"
+          :src="randomImageUrl"
           alt="Sunset in the mountains"
           class="card-img-top"
         />
@@ -52,6 +68,11 @@ const props = defineProps({
     -webkit-line-clamp: 1;
     overflow: hidden;
     margin-bottom: 10px;
+}
+
+.card img{
+  height: 200px;
+  object-fit: cover;
 }
 
 </style>
