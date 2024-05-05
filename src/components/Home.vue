@@ -1,11 +1,9 @@
 <script setup>
-
+import Banner from "./parts/Banner.vue"
 </script>
 
 <template>
-<h1 class="display-4">This Home page</h1>
-<h1 class="display-4">This Home page</h1>
-<h1 class="display-4">This Home page</h1>
+<Banner backgroundImage="https://source.unsplash.com/random/1920x500"/>
 </template>
 
 <style scoped>

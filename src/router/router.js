@@ -11,17 +11,14 @@ const routes = [
     path: "/",
     component: Home,
     name: "home",
+    meta: { title: "Home" }, // Example title for the home page
   },
   {
     path: "/about",
     component: About,
     name: "about",
+    meta: { title: "About Us" }, // Example title for the about page
   },
-  // {
-  //   path: "/blog",
-  //   component: Blog,
-  //   name: "blog",
-  // },
   {
     path: "/blog",
     name: "Blog",
@@ -31,19 +28,21 @@ const routes = [
         path: "",
         name: "BlogHome",
         component: BlogHome,
+        meta: { title: "This blog home" }, // Title for the blog home page
       },
       {
         path: ":id",
         name: "BlogSingle",
         component: BlogSingle,
+        meta: { title: "Blog Single" }, // Title for individual blog posts
       },
     ],
   },
-
   {
     path: "/contact",
     component: Contact,
     name: "contact",
+    meta: { title: "Contact Us" }, // Example title for the contact page
   },
 ];
 

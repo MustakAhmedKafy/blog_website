@@ -2,6 +2,7 @@
 import { onMounted } from "vue";
 import { data, fn } from "../../data.js";
 import BlogCard from "../parts/BlogCard.vue";
+import Banner from "../parts/Banner.vue";
 
 const getPosts = async () => {
   const res = await fn.fetchPublicApi("/posts", "get");
@@ -15,6 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
+  <Banner backgroundImage="https://source.unsplash.com/random/1920x500" />
   <section class="blog-page bg-light">
     <div class="container">
       <div class="row">
