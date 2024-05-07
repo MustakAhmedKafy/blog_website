@@ -16,7 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <Banner backgroundImage="https://source.unsplash.com/random/1920x500" />
+  <Banner backgroundImage="https://source.unsplash.com/random/2020x500" />
   <section class="blog-page bg-light">
     <div class="container">
       <div class="row">

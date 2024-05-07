@@ -21,7 +21,7 @@ getPostDetails();
 // });
 </script>
 <template>
-  <Banner  backgroundImage="https://source.unsplash.com/random/1920x500"/>
+  <Banner  backgroundImage="https://source.unsplash.com/random/2320x500"/>
   <!-- <h2>Related Posts</h2>
   <router-link class="block text-xl mt-4 lg:inline-block lg:mt-0 text-black mr-10" to="/blog/1">Blog 1</router-link>
   <router-link class="block text-xl mt-4 lg:inline-block lg:mt-0 text-black" to="/blog/2">Blog 2</router-link> -->
